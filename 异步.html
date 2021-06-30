@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    debugger
+    function loadImg(src, resolve, reject) {
+      let image = new Image();
+      image.src = src;
+      image.onload = ()=>{
+        resolve(image)
+      };
+      image.onerror = reject;
+    };
+    loadImg("/image/014.jpg",
+      (image) => {
+        console.log("加载完成");
+        console.log(image);
+      },
+      () => {
+        console.log("加载失败");
+      })
+    console.log("打印内容");
+
+  </script>
+</body>
+
+</html>

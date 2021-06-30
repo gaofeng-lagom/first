@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = [1, 5, 5.3, [2, [3]]]
+    let res = arr.flat(Infinity)
+    //--------------------
+    // let res = arr => {
+    //   return arr.reduce((pre, cur) => {
+    //     return pre.concat(Array.isArray(cur) ? res(cur) : cur)
+    //   }, [])
+    // }
+    // let res1 = res(arr)
+    // console.log(res1);
+    // ---------------
+    // let newArr = [];
+    // let res = arr => {
+    //   for (let i = 0; i < arr.length; i++) {
+    //     if (Array.isArray(arr[i])) {
+    //       res(arr[i])
+    //     } else {
+    //       newArr.push(arr[i])
+    //     }
+    //   }
+    // }
+    // res(arr)
+    // console.log(newArr);
+    //--------------------------
+  </script>
+</body>
+
+</html>
